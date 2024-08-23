@@ -1,66 +1,79 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/views/edit_notes_view.dart';
 
 class CustomNote extends StatelessWidget {
   const CustomNote({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        bottom: 8,
-      ),
-      child: Container(
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return const EditNotesView();
+            },
+          ),
+        );
+      },
+      child: Padding(
         padding: const EdgeInsets.only(
-          top: 24,
-          bottom: 24,
-          left: 16,
+          bottom: 8,
         ),
-        decoration: BoxDecoration(
-          color: const Color(0xffFFCE7F),
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            ListTile(
-              title: const Text(
-                'Flutter tips',
-                style: TextStyle(
-                  overflow: TextOverflow.ellipsis,
+        child: Container(
+          padding: const EdgeInsets.only(
+            top: 24,
+            bottom: 24,
+            left: 16,
+          ),
+          decoration: BoxDecoration(
+            color: const Color(0xffFFCE7F),
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              ListTile(
+                title: const Text(
+                  'Flutter tips',
+                  style: TextStyle(
+                    overflow: TextOverflow.ellipsis,
+                    color: Colors.black,
+                    fontSize: 26,
+                  ),
+                ),
+                subtitle: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 20,
+                  ),
+                  child: Text(
+                    'Learn Flutter With Yasser Osama',
+                    style: TextStyle(
+                      color: Colors.black.withOpacity(.5),
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.trash,
+                  size: 25,
                   color: Colors.black,
-                  fontSize: 26,
                 ),
               ),
-              subtitle: Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 20,
-                ),
+              Padding(
+                padding: const EdgeInsets.only(right: 24),
                 child: Text(
-                  'Learn Flutter With Yasser Osama',
+                  'May 21,2022',
                   style: TextStyle(
                     color: Colors.black.withOpacity(.5),
                     fontSize: 18,
                   ),
                 ),
               ),
-              trailing: const Icon(
-                FontAwesomeIcons.trash,
-                size: 25,
-                color: Colors.black,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 24),
-              child: Text(
-                'May 21,2022',
-                style: TextStyle(
-                  color: Colors.black.withOpacity(.5),
-                  fontSize: 18,
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
