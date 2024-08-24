@@ -2,7 +2,7 @@ class NotesStates {}
 
 class AddNoteInitial extends NotesStates {}
 
-class AddNoteLoading extends NotesStates {}
+class AddNoteLoading extends NotesStates {} // when user is typing 
 
 class AddNoteSuccess extends NotesStates {}
 
