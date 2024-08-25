@@ -8,7 +8,7 @@ class NotesCubit extends Cubit<NotesStates> {
   NotesCubit() : super(AddNoteInitial()); // initial state
   addNotes(NoteModel note) async {
     emit(AddNoteLoading());
-
+    // await Future.delayed(const Duration(seconds: 1));
     try {
       var notesBox = Hive.box<NoteModel>(kNotesBox);
       await notesBox.add(note);
