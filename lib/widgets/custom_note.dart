@@ -16,7 +16,9 @@ class CustomNote extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const EditNotesView();
+              return EditNotesView(
+                note: note,
+              );
             },
           ),
         );
@@ -67,7 +69,7 @@ class CustomNote extends StatelessWidget {
                   color: Colors.black,
                   onPressed: () {
                     note.delete();
-                    BlocProvider.of<NotesCubit>(context).fetchNotes(); 
+                    BlocProvider.of<NotesCubit>(context).fetchNotes();
                   },
                 ),
               ),
