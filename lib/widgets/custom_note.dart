@@ -57,10 +57,15 @@ class CustomNote extends StatelessWidget {
                     ),
                   ),
                 ),
-                trailing: const Icon(
-                  FontAwesomeIcons.trash,
-                  size: 25,
+                trailing: IconButton(
+                  icon: const Icon(
+                    FontAwesomeIcons.trash,
+                    size: 25,
+                  ),
                   color: Colors.black,
+                  onPressed: () {
+                    note.delete();
+                  },
                 ),
               ),
               Padding(
