@@ -10,8 +10,8 @@ class AddNoteBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: BlocConsumer<NotesCubit, NotesStates>(
+      create: (context) => AddNotesCubit(),
+      child: BlocConsumer<AddNotesCubit, AddNotesStates>(
         listener: (context, state) {
           if (state is AddNoteSuccess) {
             Navigator.pop(context);

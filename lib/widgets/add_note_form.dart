@@ -44,7 +44,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           const SizedBox(
             height: 30,
           ),
-          BlocBuilder<NotesCubit, NotesStates>(
+          BlocBuilder<AddNotesCubit, AddNotesStates>(
             builder: (context, state) {
               return CustomButton(
                 isLoading: state is AddNoteLoading ? true : false,
@@ -57,7 +57,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                       title: title!,
                       subTitle: subTitle!,
                     );
-                    BlocProvider.of<NotesCubit>(context).addNotes(note);
+                    BlocProvider.of<AddNotesCubit>(context).addNotes(note);
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                   }
