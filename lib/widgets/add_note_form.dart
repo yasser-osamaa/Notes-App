@@ -51,9 +51,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 isLoading: state is AddNoteLoading ? true : false,
                 onTap: () {
                   if (formKey.currentState!.validate()) {
+                    var now = DateTime.now();
+                    var formatedTime = DateFormat('dd MMMM yyyy').format(now);
                     formKey.currentState!.save();
                     NoteModel note = NoteModel(
-                      date: DateFormat('dd MMMM yyyy').format(DateTime.now()),
+                      date: formatedTime,
                       color: Colors.blueGrey.value,
                       title: title!,
                       subTitle: subTitle!,
