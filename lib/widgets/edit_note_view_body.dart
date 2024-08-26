@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/widgets/color_item.dart';
 import 'package:notes_app/widgets/custom_appbar.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
+import 'package:notes_app/widgets/edit_color_list_view.dart';
 
 class EditNoteViewBody extends StatefulWidget {
   const EditNoteViewBody({
@@ -79,49 +78,6 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class EditColorListView extends StatefulWidget {
-  const EditColorListView({super.key, required this.note});
-  final NoteModel note;
-  @override
-  State<EditColorListView> createState() => _EditColorListViewState();
-}
-
-class _EditColorListViewState extends State<EditColorListView> {
-  late int colorIndex;
-  @override
-  void initState() {
-    colorIndex = kColors.indexOf(Color(widget.note.color));
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 35 * 2,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: kColors.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            child: GestureDetector(
-              onTap: () {
-                colorIndex = index;
-                widget.note.color = kColors[index].value;
-                setState(() {});
-              },
-              child: ColorItem(
-                isSelected: index == colorIndex,
-                color: kColors[index],
-              ),
-            ),
-          );
-        },
       ),
     );
   }
