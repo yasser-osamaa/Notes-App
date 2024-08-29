@@ -4,10 +4,16 @@ Using Hive as Local Database and Cubit as State management
 
 ## Widget i used 
 
-This project is a starting point for a Flutter application.
+- Containe Widget and ListTile to make Custom note.<br>
+- ListView.Builder to build List of Notes Scrollable.<br>
+- CircleAvatar Widget to make List of Notes Color.<br>
+- TextFormField to Validate and take Data frim textField and save it in Hive.<br>
+- Custom Button make it as Container with GestureDetector.<br>
+- floatingActionButton When we use it, we have to create an external widget and Return it in Builder.<br>
+- Basic Widget Like Text, Row and Coloumn.
 
+<br>
 
-<br><br>
 ## Package i used
 
 ### dependencies
