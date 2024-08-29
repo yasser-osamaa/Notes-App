@@ -12,6 +12,10 @@ Using Hive as Local Database and Cubit as State management
 - floatingActionButton When we use it, we have to create an external widget and Return it in Builder.<br>
 - Basic Widget Like Text, Row and Coloumn.
 
+  
+## Fonts i used 
+- Poppins
+
 ## Package i used
 
 ### dependencies
@@ -27,10 +31,8 @@ Using Hive as Local Database and Cubit as State management
  - hive_generator: ^2.0.1 And build_runner: 2.4.11
   <br> To generate Adapter and store Object in Hive <br>
 
-<br><br>
 
-## Fonts i used 
-- Poppins
+
   
 <br><br>
 For help getting started with Flutter development, view the
