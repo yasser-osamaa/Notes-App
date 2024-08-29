@@ -28,6 +28,11 @@ Using Hive as Local Database and Cubit as State management
   <br> To generate Adapter and store Object in Hive <br>
 
 <br><br>
+
+## Fonts i used 
+- Poppins
+  
+<br><br>
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
