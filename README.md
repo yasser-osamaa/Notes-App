@@ -12,8 +12,6 @@ Using Hive as Local Database and Cubit as State management
 - floatingActionButton When we use it, we have to create an external widget and Return it in Builder.<br>
 - Basic Widget Like Text, Row and Coloumn.
 
-<br>
-
 ## Package i used
 
 ### dependencies
