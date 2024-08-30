@@ -10,6 +10,7 @@ Using Hive as Local Database and Cubit as State management
 - TextFormField to Validate and take Data frim textField and save it in Hive.<br>
 - Custom Button make it as Container with GestureDetector.<br>
 - floatingActionButton When we use it, we have to create an external widget and Return it in Builder.<br>
+- showModalBottomSheet when i click on floating action Button model bottom sheet showed with ScrollControlled. <br>
 - Basic Widget Like Text, Row and Coloumn.
 
   
